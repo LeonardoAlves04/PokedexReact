@@ -40,6 +40,7 @@ nav {
   height: 44px;
   color: white;
   padding: 10px 12px;
+  position: fixed;
 }
 
 .App {
