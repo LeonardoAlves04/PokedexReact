@@ -8,7 +8,6 @@ function App() {
       <Navbar />
       <SearchBar />
       <div className="App">
-
       </div>
     </div>
   );
