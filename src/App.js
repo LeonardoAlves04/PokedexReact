@@ -1,14 +1,18 @@
+import React, { useEffect, useState } from 'react';
 import './App.css';
-import Navbar from './components/navbar';
+import Navbar from './components/Navbar';
+import Pokedex from './components/Pokedex';
 import SearchBar from './components/SearchBar';
 
 function App() {
+  useEffect(() => {
+    console.log("carregou")
+  }, [])
   return (
     <div>
       <Navbar />
       <SearchBar />
-      <div className="App">
-      </div>
+      <Pokedex />
     </div>
   );
 }
