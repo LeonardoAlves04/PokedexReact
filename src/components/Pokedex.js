@@ -1,25 +1,27 @@
 import React from "react";
+import Pokemon from "./Pokemon";
+
 
 const Pokedex = (props) => {
     const { pokemons, loading } = props;
+    console.log("pokemons", pokemons)
     return (
-        <div >
+        <div>
             <div className="pokedex-header">
                 <h1>Pokedex</h1>
                 <div>Paginação</div>
             </div>
-            {loading ? (<div>Carregando, guenta um cado ai...</div>)
-                : (<div className="pokedex-grind">
+            {loading ? (
+                <div>Carregando, guenta um cado ai...</div>
+            ) : (
+                <div className="pokedex-grind">
                     {pokemons && pokemons.map((pokemon, index) => {
                         return (
-                            <div>
-                                <div> Nome: {pokemon.name}</div>
-                                <img alt={pokemon.name} src={pokemon.url} />
-                            </div>
+                            <Pokemon key={index} pokemon={pokemon} />
                         );
                     })}
                 </div>
-                )}
+            )}
         </div>
     );
 };

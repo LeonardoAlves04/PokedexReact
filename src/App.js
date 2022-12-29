@@ -3,7 +3,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Pokedex from './components/Pokedex';
 import SearchBar from './components/SearchBar';
-import { getPokemon } from './components/api';
+import { getPokemon, getPokemonData } from './components/api';
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -12,8 +12,13 @@ function App() {
   const fetchPokemons = async () => {
     try {
       setLoading(true)
-      const result = await getPokemon();
-      setPokemons(result);
+      const data = await getPokemon();
+      const promises = data.results.map(async (pokemon) => {
+        return await getPokemonData(pokemon.url)
+      });
+
+      const results = await Promise.all(promises);
+      setPokemons(results);
       setLoading(false);
     } catch (error) {
       console.log("fetch Pokemons error: ", error)
