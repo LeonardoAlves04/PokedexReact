@@ -14,7 +14,7 @@ const Pokedex = (props) => {
             {loading ? (
                 <div>Carregando, guenta um cado ai...</div>
             ) : (
-                <div className="pokedex-grind">
+                <div className="pokedex-grid">
                     {pokemons && pokemons.map((pokemon, index) => {
                         return (
                             <Pokemon key={index} pokemon={pokemon} />
