@@ -6,6 +6,8 @@ import SearchBar from './components/SearchBar';
 import { getPokemon, getPokemonData } from './components/api';
 
 function App() {
+  const [page, setPage] = useState(0);
+  const [totalPages, setTotalPages] = useState(0);
   const [loading, setLoading] = useState(false);
   const [pokemons, setPokemons] = useState([]);
 
@@ -34,7 +36,7 @@ function App() {
     <div>
       <Navbar />
       <SearchBar />
-      <Pokedex pokemons={pokemons} loading={loading} />
+      <Pokedex pokemons={pokemons} loading={loading} page={page} totalPages={totalPages} />
     </div>
   );
 }

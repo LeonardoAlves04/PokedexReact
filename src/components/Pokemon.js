@@ -1,13 +1,11 @@
 import React from "react";
 
-
-
 const Pokemon = (props) => {
     const { pokemon } = props
     const onHeartClick = () => {
         console.log("favorita ae menó")
     }
-    const heart = "❤";
+    const heart = "❤️";
     return (<div className="pokemon-card">
         <div className="pokemon-image-container">
             <img alt={pokemon.name} src={pokemon.sprites.front_default} className="pokemon-image" />
