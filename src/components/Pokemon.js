@@ -3,7 +3,7 @@ import React from "react";
 const Pokemon = (props) => {
     const { pokemon } = props
     const onHeartClick = () => {
-        console.log("favorita ae menó")
+        console.log("favorita ae meu caro")
     }
     const heart = "❤️";
     return (<div className="pokemon-card">
