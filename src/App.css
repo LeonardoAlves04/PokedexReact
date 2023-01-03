@@ -107,10 +107,15 @@ nav {
   text-transform: capitalize;
 }
 
+.pagination-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .pokemon-heart-btn {
   border-radius: 5px;
   cursor: pointer;
-
 }
 
 .App {
