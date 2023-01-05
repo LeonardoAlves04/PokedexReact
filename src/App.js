@@ -13,6 +13,7 @@ function App() {
   const [pokemons, setPokemons] = useState([]);
   const [favorites, setFavorites] = useState([]);
   const itensPerPage = 27;
+  const favoritesKey = "f"
 
   const fetchPokemons = async () => {
     try {
@@ -31,6 +32,15 @@ function App() {
     }
   }
 
+  const loadFavoritePokemons = () => {
+    const pokemons = JSON.parse(window.localStorage.getItem(favoritesKey)) || []
+    setFavorites(pokemons)
+  }
+
+  useEffect(() => {
+    loadFavoritePokemons();
+  }, [])
+
   useEffect(() => {
     fetchPokemons();
   }, [page])
@@ -39,10 +49,11 @@ function App() {
     const updateFavorites = [...favorites]
     const favoriteIndex = favorites.indexOf(name)
     if (favoriteIndex >= 0) {
-      updateFavorites.slice(favoriteIndex, 1)
+      updateFavorites.splice(favoriteIndex, 1)
     } else {
       updateFavorites.push(name);
     }
+    window.localStorage.setItem(favoritesKey, JSON.stringify(updateFavorites))
     setFavorites(updateFavorites);
   }
 
