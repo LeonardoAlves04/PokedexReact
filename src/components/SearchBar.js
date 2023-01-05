@@ -2,17 +2,16 @@ import React, { useState } from "react";
 
 const SearchBar = (props) => {
     const [search, setSearch] = useState("dito")
-    const [pokemon, setPokemon] = useState("")
-    const { onSearchHandler } = props
+    const { onSearch } = props
     const onChangeHandler = (e) => {
         setSearch(e.target.value)
         if (e.target.value === 0) {
-            onSearchHandler(undefined)
+            onSearch(undefined)
         }
     }
 
     const onButtonClickHandler = () => {
-        onSearchHandler(search)
+        onSearch(search)
     }
 
     return (
@@ -23,13 +22,6 @@ const SearchBar = (props) => {
             <div className="searchbar-btn">
                 <button onClick={onButtonClickHandler}> Buscar </button>
             </div>
-
-            {pokemon ? (<div>
-                <div>Nome: {pokemon.name} </div>
-                <div>Peso: {pokemon.weight + " kg"}</div>
-                <img src={pokemon.sprites.front_default} alt={pokemon.name} />
-            </div>
-            ) : null}
         </div>
     )
 }
