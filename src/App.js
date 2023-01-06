@@ -19,9 +19,10 @@ function App() {
   const fetchPokemons = async () => {
     try {
       setLoading(true)
+      setNotFound(false)
       const data = await getPokemon(itensPerPage, itensPerPage * page);
       const promises = data.results.map(async (pokemon) => {
-        return await getPokemonData(pokemon.url)
+        return await getPokemonData(pokemon.url);
       });
 
       const results = await Promise.all(promises);
@@ -60,18 +61,20 @@ function App() {
 
   const onSearchHandler = async (pokemon) => {
     if (!pokemon) {
-      return fetchPokemons();
+      return fetchPokemons()
     }
 
     setLoading(true)
     setNotFound(false)
-    const result = await searchPokemon(pokemon);
+    const result = await searchPokemon(pokemon)
     if (!result) {
-      setLoading(false)
       setNotFound(true)
     } else {
       setPokemons([result])
     }
+    setLoading(false)
+    setPage(0)
+    setTotalPages(1)
   }
 
   return (
@@ -82,7 +85,8 @@ function App() {
       <div>
         <Navbar />
         <SearchBar onSearch={onSearchHandler} />
-        {notFound ? (<div className="not-found-text">Ta viajando meu parceiro, existe isso não!</div>) :
+        {notFound ? (<div className="not-found-text">Ta viajando meu parceiro, existe esse pokemon não!</div>
+        ) :
           (<Pokedex
             pokemons={pokemons}
             loading={loading}
