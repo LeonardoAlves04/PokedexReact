@@ -13,7 +13,7 @@ function App() {
   const [notFound, setNotFound] = useState(false);
   const [pokemons, setPokemons] = useState([]);
   const [favorites, setFavorites] = useState([]);
-  const itensPerPage = 27;
+  const itensPerPage = 24;
   const favoritesKey = "f"
 
   const fetchPokemons = async () => {
@@ -84,7 +84,7 @@ function App() {
     }}>
       <div>
         <Navbar />
-        <SearchBar onSearch={onSearchHandler} />
+        <SearchBar onSearch={onSearchHandler} pokemonsFiltrados={pokemonsFiltrados} />
         {notFound ? (<div className="not-found-text">Ta viajando meu parceiro, existe esse pokemon não!</div>
         ) :
           (<Pokedex
