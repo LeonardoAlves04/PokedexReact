@@ -26,7 +26,7 @@ const Pokedex = (props) => {
                     onRightClick={onRightClickHandler} />
             </div>
             {loading ? (
-                <div>Carregando, guenta um cado ai...</div>
+                <div className="loading-text">Carregando, guenta um cado ai...</div>
             ) : (
                 <div className="pokedex-grid">
                     {pokemons && pokemons.map((pokemon, index) => {

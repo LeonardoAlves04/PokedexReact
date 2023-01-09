@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import Pokeball from "./pokeball.png"
+
 
 const SearchBar = (props) => {
-    const [search, setSearch] = useState("")
+    const [search, setSearch] = useState("");
     const { onSearch } = props
-    const onChangeHandler = (e) => {
+    const onChangeHandler = (e, busca) => {
         setSearch(e.target.value)
         if (e.target.value.length === 0) {
             onSearch(undefined)
@@ -20,7 +22,7 @@ const SearchBar = (props) => {
                 <input placeholder="Buscar pokemon" onChange={onChangeHandler} />
             </div>
             <div className="searchbar-btn">
-                <button onClick={onButtonClickHandler}> Buscar </button>
+                <button onClick={onButtonClickHandler}> <img alt="pokeball" className="pokeball-image" src={Pokeball} /> </button>
             </div>
         </div>
     )

@@ -13,17 +13,12 @@ nav {
 
 .navbar-img {
   width: 160px;
-}
-
-.pokeball-image {
-  height: 30px;
-  width: 30px;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .amount-favorite {
   font-size: 20px;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .searchbar-container {
@@ -51,12 +46,13 @@ nav {
 }
 
 .searchbar-btn button {
-  background-color: #87CEEB;
-  color: black;
   border: none;
-  border-radius: 10px;
-  height: 38px;
-  padding: 10px 12px;
+}
+
+.pokeball-image {
+  height: 35px;
+  width: 35px;
+  border: none;
   cursor: pointer;
 }
 
@@ -83,7 +79,7 @@ nav {
 .pokemon-image {
   width: 70px;
   height: 70px;
-  margin-right: 10px;
+  margin-right: 5px;
   background-color: #F5F5F5
 }
 
@@ -159,7 +155,13 @@ nav {
 .not-found-text {
   text-align: center;
   font-size: 1.25rem;
-  padding: 20px;
+  padding: 15px;
+}
+
+.loading-text {
+  text-align: center;
+  font-size: 1.25rem;
+  padding: 10px;
 }
 
 .App {
