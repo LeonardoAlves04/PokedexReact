@@ -16,14 +16,6 @@ function App() {
   const itensPerPage = 24;
   const favoritesKey = "f"
 
-  // function lowerCaseSearch(searchValue) {
-  //   pokemons.filter((pokemon) => {
-  //     const titleNormalized = pokemon.title.toLoweCase();
-  //     const searchValueNormalized = searchValue.toLoweCase();
-  //     return titleNormalized.includes(searchValueNormalized)
-  //   })
-  // } isso é oq fiz no alura tub pra conseguir pesquisar com letras maiusculas e minusculas
-
   const fetchPokemons = async () => {
     try {
       setLoading(true)
@@ -71,7 +63,6 @@ function App() {
     if (!pokemon) {
       return fetchPokemons()
     }
-
     setLoading(true)
     setNotFound(false)
     const result = await searchPokemon(pokemon)
