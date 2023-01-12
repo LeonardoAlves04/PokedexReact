@@ -8,7 +8,7 @@
 ![estado inicial](https://user-images.githubusercontent.com/69488943/212145791-58a30001-2d42-484b-b117-25acf144d8ac.png)
 
 * Favoritando Pokemons:
-![Favoritando](https://user-images.githubusercontent.com/69488943/212145778-c984243a-fe12-467f-930b-9503cfc00c1d.png)
+![favoritos](https://user-images.githubusercontent.com/69488943/212146066-718b93fd-1c02-4b78-b29e-6b75c578de87.png)
 
 *Buscando pela barra de pesquisa:
 ![buscando](https://user-images.githubusercontent.com/69488943/212145767-45ed2558-88ba-4a65-8e6a-fddf2d5f6f2f.png)
