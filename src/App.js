@@ -13,7 +13,7 @@ function App() {
   const [notFound, setNotFound] = useState(false);
   const [pokemons, setPokemons] = useState([]);
   const [favorites, setFavorites] = useState([]);
-  const itensPerPage = 24;
+  const itensPerPage = 27;
   const favoritesKey = "f"
 
   const fetchPokemons = async () => {
