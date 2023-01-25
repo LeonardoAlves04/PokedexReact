@@ -7,10 +7,10 @@
 # Fotos do projeto:
 
 * Projeto iniciado:
-![estado inicial](https://user-images.githubusercontent.com/69488943/212145791-58a30001-2d42-484b-b117-25acf144d8ac.png)
+![Captura de Tela (131)](https://user-images.githubusercontent.com/69488943/214575312-12c34961-89c2-4fb4-93fc-e34e890dac2e.png)
 
 * Favoritando Pokemons:
-![favoritos](https://user-images.githubusercontent.com/69488943/212146066-718b93fd-1c02-4b78-b29e-6b75c578de87.png)
+![Captura de Tela (130)](https://user-images.githubusercontent.com/69488943/214575319-f7073638-021c-499f-b8f7-df5ca017b6ef.png)
 
 * Buscando pela barra de pesquisa:
 ![Captura de Tela (129)](https://user-images.githubusercontent.com/69488943/214574808-a576d1f0-6d6e-4696-8aee-917e9bbf4d00.png)
