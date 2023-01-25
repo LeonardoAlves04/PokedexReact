@@ -12,6 +12,6 @@
 * Favoritando Pokemons:
 ![favoritos](https://user-images.githubusercontent.com/69488943/212146066-718b93fd-1c02-4b78-b29e-6b75c578de87.png)
 
-*Buscando pela barra de pesquisa:
+* Buscando pela barra de pesquisa:
 ![Captura de Tela (129)](https://user-images.githubusercontent.com/69488943/214574808-a576d1f0-6d6e-4696-8aee-917e9bbf4d00.png)
 
